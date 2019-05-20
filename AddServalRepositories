@@ -1,0 +1,31 @@
+git一个本地分支同时向多个远程分支提交代码
+
+有时我们需要将代码同时放在多个分支上，每个分支新建一个项目费事又容易出错，那可不可以一个项目同时绑定多个分支呢，比如同时向码云和Github；作为牛逼的git当然是可以办到的
+第一方法
+项目根路径中右击git bash
+添加一个远程仓库
+git remote add origin https://git.oschina.net/Jicklin/bokeyuan.git
+其中的origin是仓库的名称 可以换成别的
+再添加另外一个
+git remote set-url --add origin https://github.com/jicklin/bokeyuan.git
+当然如果还有的话可以接着添加
+这样就把多个远程仓库都添加进去啦
+打开.get/config可以发现
+
+
+
+
+
+Paste_Image.png
+
+直接修改config文件
+将远程仓库地址按照格式添加即可
+这样执行 就会同时同步两个库了
+$ git push origin master
+Everything up-to-date
+Everything up-to-date
+
+作者：马木木
+链接：https://www.jianshu.com/p/dee791260538
+来源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
